@@ -14,21 +14,18 @@
 # limitations under the License.
 #
 
-apiVersion: v2
-name: thingsboard
-description: A Helm chart for Thingsboard
-type: application
-version: 0.1.1
-appVersion: 3.4.0
-icon: https://avatars.githubusercontent.com/u/24291394?s=200&v=4
-home: https://github.com/thingsboard/thingsboard-ce-k8s/
-dependencies:
-  - name: postgresql-ha
-    version: 8.5.2
-    repository: https://charts.bitnami.com/bitnami
-  - name: kafka
-    version: 15.3.4
-    repository: https://charts.bitnami.com/bitnami
-  - name: redis
-    version: 16.4.5
-    repository: https://charts.bitnami.com/bitnami
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-node
+  labels:
+    {{- include "thingsboard.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.node.service.type }}
+  ports:
+    - port: {{ .Values.node.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "thingsboard.selectorLabels-node" . | nindent 4 }}
