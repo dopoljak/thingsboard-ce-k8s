@@ -300,3 +300,5 @@ kafka:
   zookeeper:
     persistence:
       enabled: false
+    containerPorts:
+      client: 2181
