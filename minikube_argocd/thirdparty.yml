@@ -53,7 +53,7 @@ metadata:
   namespace: thingsboard
 spec:
   serviceName: "zookeeper-headless"
-  replicas: 1
+  replicas: 3
   podManagementPolicy: Parallel
   selector:
     matchLabels:
