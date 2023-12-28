@@ -300,4 +300,13 @@ kafka:
 #  zookeeper:
 #    persistence:
 #      enabled: false
+  zookeeper:
+    containerPorts:
+      client: 2181
+
+zookeeper:
+  persistence:
+    enabled: false
+  containerPorts:
+    client: 2181
 

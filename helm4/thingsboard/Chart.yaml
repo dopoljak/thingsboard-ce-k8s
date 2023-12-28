@@ -36,3 +36,6 @@ dependencies:
   - name: redis
     version: 18.6.1
     repository: https://charts.bitnami.com/bitnami
+  - name: zookeeper
+    version: 12.4.0
+    repository: https://charts.bitnami.com/bitnami
