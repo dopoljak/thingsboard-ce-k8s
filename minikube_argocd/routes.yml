@@ -27,85 +27,85 @@ spec:
   rules:
     - http:
         paths:
-          - path: /api/v1/.*
-            pathType: ImplementationSpecific
+          - path: /api/v1
+            pathType: Prefix
             backend:
               service:
                 name: tb-http-transport
                 port:
                   number: 8080
           - path: /api/.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /swagger.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /webjars.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /v2/.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /v3/.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /static/rulenode/.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /assets/help/.*/rulenode/.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /oauth2/.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /login/oauth2/.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
           - path: /
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-web-ui
                 port:
                   number: 8080
           - path: /.*
-            pathType: ImplementationSpecific
+            pathType: Prefix
             backend:
               service:
                 name: tb-web-ui
