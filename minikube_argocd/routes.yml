@@ -34,42 +34,42 @@ spec:
                 name: tb-http-transport
                 port:
                   number: 8080
-          - path: /api/.*
+          - path: /api
             pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
-          - path: /swagger.*
+          - path: /swagger
             pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
-          - path: /webjars.*
+          - path: /webjars
             pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
-          - path: /v2/.*
+          - path: /v2
             pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
-          - path: /v3/.*
+          - path: /v3
             pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
-          - path: /static/rulenode/.*
+          - path: /static/rulenode
             pathType: Prefix
             backend:
               service:
@@ -83,14 +83,14 @@ spec:
                 name: tb-node
                 port:
                   number: 8080
-          - path: /oauth2/.*
+          - path: /oauth2
             pathType: Prefix
             backend:
               service:
                 name: tb-node
                 port:
                   number: 8080
-          - path: /login/oauth2/.*
+          - path: /login/oauth2
             pathType: Prefix
             backend:
               service:
@@ -98,13 +98,6 @@ spec:
                 port:
                   number: 8080
           - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: tb-web-ui
-                port:
-                  number: 8080
-          - path: /.*
             pathType: Prefix
             backend:
               service:
