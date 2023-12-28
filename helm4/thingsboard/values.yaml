@@ -302,3 +302,5 @@ kafka:
       enabled: false
     containerPorts:
       client: 2181
+  config:
+    replicationFactor: 1
